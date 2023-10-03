@@ -15,8 +15,17 @@ Work done = Final kinetic energy - initial kinetic energy
 This documentation provides an overview of the code, describes the functions, their parameters, and return values, and includes an example of how to use the code.
 
 __Code:__
+
+
+
+
+[WorkDoneByLambdaFn.md](https://github.com/sharmistharanit/23-Homework3G4/files/12794686/WorkDoneByLambdaFn.md)```python
 def calculate_work(initial_ke, final_ke):
     return final_ke - initial_ke
+```
+
+
+```python
 def calculate_and_print_work(initial_ke, final_ke, work_function):
     work_done = work_function(initial_ke, final_ke)
     print(f"Work done: {work_done} Joules")
@@ -29,5 +38,13 @@ final_ke = 120  # Final Kinetic Energy in Joules
 work_function = lambda initial_ke, final_ke: final_ke - initial_ke
 
 calculate_and_print_work(initial_ke, final_ke, work_function)
-# output: Work done: 70 Joules
+```
+
+    Work done: 70 Joules
+
+
+
+```python
+
+```
 
