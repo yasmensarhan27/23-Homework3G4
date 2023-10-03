@@ -1,0 +1,94 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyO6b8sz8yBLlTnqcG4Nb86f",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/poojashresthacode/23-Homework3G4/blob/Utest1/Body_at_rest_in_final_position.\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Import the required libraries for testing\n",
+        "import math\n",
+        "\n",
+        "# Define a function to test the calculate_work_done function\n",
+        "def test_calculate_work_done():\n",
+        "    # Given data\n",
+        "    velocities_mph = [10, 20, 30, 40, 0]\n",
+        "    mph_to_mps = 0.44704\n",
+        "    mass_of_car = 1000\n",
+        "\n",
+        "    # Convert velocities from mph to m/s using the same lambda function\n",
+        "    convert_to_mps = lambda v_mph: v_mph * mph_to_mps\n",
+        "    velocities_mps = list(map(convert_to_mps, velocities_mph))\n",
+        "\n",
+        "    # Calculate the expected work done at each point manually\n",
+        "    expected_work_done = []\n",
+        "    prev_velocity = 0\n",
+        "    for velocity in velocities_mps:\n",
+        "        delta_ke = 0.5 * mass_of_car * (velocity**2 - prev_velocity**2)\n",
+        "        prev_velocity = velocity\n",
+        "        expected_work_done.append(delta_ke)\n",
+        "\n",
+        "    # Calculate work done using the calculate_work_done function\n",
+        "    calculated_work_done = list(calculate_work_done(velocities_mps, mass_of_car))\n",
+        "\n",
+        "    # Assert that the calculated work done matches the expected values\n",
+        "    for expected, calculated in zip(expected_work_done, calculated_work_done):\n",
+        "        assert math.isclose(expected, calculated, rel_tol=1e-9), f\"Expected {expected}, but got {calculated}\"\n",
+        "\n",
+        "    print(calculated_work_done)\n",
+        "\n",
+        "# Run the test function\n",
+        "test_calculate_work_done()\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "QfadD7WEa5je",
+        "outputId": "65f91af8-10eb-4409-81b6-73f2f6e3f6f1"
+      },
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[9992.238079999997, 29976.714239999994, 49961.1904, 69945.66655999998, -159875.80927999996]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "10Q1_Z4vb80L"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
