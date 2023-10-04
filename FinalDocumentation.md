@@ -55,3 +55,10 @@ To use this code, you need to provide values for `velocities_mph` and `work_done
 **Code**
 [WorkDonebyMapAndLambda.md](https://github.com/sharmistharanit/23-Homework3G4/files/12807475/WorkDonebyMapAndLambda.md)
 ![output_1_0](https://github.com/sharmistharanit/23-Homework3G4/assets/143737948/2bb3b4f0-59dd-48a1-8830-777e22dc304c)
+
+
+**References:**
+1) https://docs.python.org/3/howto/functional.html#small-functions-and-the-lambda-expression
+2) https://docs.python.org/3/library/functions.html#map
+3) https://docs.python.org/3/howto/functional.html
+4) Chatgpt
