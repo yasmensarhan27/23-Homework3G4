@@ -1,3 +1,32 @@
+**Background:**
+A brief introduction of lambda function and map function is given.
+
+**Lambda Function:**
+A lambda function, also known as an anonymous function or lambda expression, is a way to create small, inline, and nameless functions in Python. Lambda functions are typically used for simple operations or calculations.
+**Example of Lambda function**
+1) 
+add = lambda x, y: x + y
+result = add(3, 5)
+print(result)  # Output: 8
+
+2)
+numbers = [1, 2, 3, 4, 5]
+squared = list(map(lambda x: x**2, numbers))
+print(squared)  # Output: [1, 4, 9, 16, 25]
+
+**Map Function:**
+
+The map() function in Python is used to apply a given function to all elements of an iterable (e.g., a list, tuple, or other iterable data structures) and return an iterator. It takes two arguments: the function to apply and the iterable to apply it to. The result is an iterator that yields the results of applying the function to each element of the iterable one by one.
+
+
+
+**Example of syntax of map function**
+1)
+numbers = [1, 2, 3, 4, 5]
+squared = list(map(lambda x: x**2, numbers))
+print(squared)  # Output: [1, 4, 9, 16, 25]
+
+
 >**Work Calculation and Testing Script by using lambda function and map function:**
 
 This Python script defines a function for calculating work done by a car as a function of its velocities and mass.
