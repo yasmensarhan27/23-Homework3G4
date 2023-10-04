@@ -1,7 +1,10 @@
-**Work Calculation and Testing Script**
+**Work Calculation and Testing Script:**
+
 This Python script defines a function for calculating work done by a car as a function of its velocities and mass.
 It also includes a test function to ensure the correctness of the work calculation function.
-**Steps**
+
+
+**Steps:**
 1) Define a function calculate_work_done(velocities, mass).
 2) Calculates the work done by a car based on its velocities and mass.
 3) Define parameters.
