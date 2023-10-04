@@ -1,4 +1,4 @@
-[WorkDonebyMapAndLambda.md](https://github.com/sharmistharanit/23-Homework3G4/files/12806367/WorkDonebyMapAndLambda.md)>**Work Calculation and Testing Script by using lambda function and map function:**
+>**Work Calculation and Testing Script by using lambda function and map function:**
 
 This Python script defines a function for calculating work done by a car as a function of its velocities and mass.
 It also includes a test function to ensure the correctness of the work calculation function.
@@ -23,59 +23,34 @@ It also includes a test function to ensure the correctness of the work calculati
     6. Compares the calculated and expected values within a small tolerance.
     7. Prints the calculated work done.
 
+## Stacked Bar Plot Documentation
 
+## Introduction
+This code generates a stacked bar plot using Matplotlib to visualize the relationship between velocity and work done. The plot displays work done (in Joules) at different velocities (in mph).
 
- **Code:**
+## Code Explanation
+The code consists of several components:
+**Setting Figure Size**: 
+   - `plt.figure(figsize=(10, 6))`: This line sets the size of the figure to be 10 inches in width and 6 inches in height.
 
-import math
+2. **Creating the Stacked Bar Plot**:
+   - `plt.bar(velocities_mph, work_done_list, width=10, align='center', label='Work Done (Joules)')`: This line creates a stacked bar plot using the `bar()` function from Matplotlib. It uses `velocities_mph` as the x-axis values, `work_done_list` as the y-axis values, sets the bar width to 10 units, aligns the bars to the center of each x-value, and labels the bars as 'Work Done (Joules)'.
 
-# Define a function to calculate work done
-def calculate_work_done(velocities, mass):
-    work_done = []
-    prev_velocity = 0
-    for velocity in velocities:
-        delta_ke = 0.5 * mass * (velocity**2 - prev_velocity**2)
-        prev_velocity = velocity
-        work_done.append(delta_ke)
-    return work_done
+3. **Axis Labels and Title**:
+   - `plt.xlabel('Velocity (mph)')`: Sets the label for the x-axis as 'Velocity (mph)'.
+   - `plt.ylabel('Work Done (Joules)')`: Sets the label for the y-axis as 'Work Done (Joules)'.
+   - `plt.title('Work Done vs. Velocity (Stacked Bar Plot)')`: Sets the title of the plot as 'Work Done vs. Velocity (Stacked Bar Plot)'.
 
-# Define a function to test the calculate_work_done function
-def test_calculate_work_done():
-    # Given data
-    velocities_mph = [10, 20, 30, 40, 0]
-    mph_to_mps = 0.44704
-    mass_of_car = 1000
+4. **Grid Lines**:
+   - `plt.grid(axis='y', linestyle='--', alpha=0.7)`: Adds dashed grid lines to the y-axis with an alpha (transparency) value of 0.7 for improved readability.
 
-    # Convert velocities from mph to m/s using the same lambda function
-    convert_to_mps = lambda v_mph: v_mph * mph_to_mps
-    velocities_mps = list(map(convert_to_mps, velocities_mph))
-# Calculate the expected work done at each point manually
-    expected_work_done = []
-    prev_velocity = 0
-    for velocity in velocities_mps:
-        delta_ke = 0.5 * mass_of_car * (velocity**2 - prev_velocity**2)
-        prev_velocity = velocity
-        expected_work_done.append(delta_ke)
+5. **Legend**:
+   - `plt.legend()`: Adds a legend to the plot, which will display the label 'Work Done (Joules)' to explain the meaning of the bars.
+6. **Displaying the Plot**:
+   - `plt.show()`: Finally, this line displays the generated plot to the user.
 
-    # Calculate work done using the calculate_work_done function
-    calculated_work_done = list(calculate_work_done(velocities_mps, mass_of_car))
+## Usage
+To use this code, you need to provide values for `velocities_mph` and `work_done_list`, which represent the velocities (in mph) and the corresponding work done (in Joules) for your specific dataset. You can modify these values to create a stacked bar plot for your own data.
 
-    # Assert that the calculated work done matches the expected values
-    for expected, calculated in zip(expected_work_done, calculated_work_done):
-        assert math.isclose(expected, calculated, rel_tol=1e-9), f"Expected {expected}, but got {calculated}"
-
-    print(calculated_work_done)
-
-# Run the test function
-test_calculate_work_done()
-```
-
-    [9992.238079999997, 29976.714239999994, 49961.1904, 69945.66655999998, -159875.80927999996]
-
-
-
-```python
-
-```
-ploading WorkDonebyMapAndLambda.md…]()
-
+**Code**
+[WorkDonebyMapAndLambda.zip](https://github.com/sharmistharanit/23-Homework3G4/files/12807415/WorkDonebyMapAndLambda.zip)
