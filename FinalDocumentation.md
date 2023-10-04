@@ -53,4 +53,5 @@ The code consists of several components:
 To use this code, you need to provide values for `velocities_mph` and `work_done_list`, which represent the velocities (in mph) and the corresponding work done (in Joules) for your specific dataset. You can modify these values to create a stacked bar plot for your own data.
 
 **Code**
-[WorkDonebyMapAndLambda.zip](https://github.com/sharmistharanit/23-Homework3G4/files/12807415/WorkDonebyMapAndLambda.zip)
+[WorkDonebyMapAndLambda.md](https://github.com/sharmistharanit/23-Homework3G4/files/12807475/WorkDonebyMapAndLambda.md)
+![output_1_0](https://github.com/sharmistharanit/23-Homework3G4/assets/143737948/2bb3b4f0-59dd-48a1-8830-777e22dc304c)
