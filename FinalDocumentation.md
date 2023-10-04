@@ -3,6 +3,8 @@ A brief introduction of lambda function and map function is given.
 
 **Lambda Function:**
 A lambda function, also known as an anonymous function or lambda expression, is a way to create small, inline, and nameless functions in Python. Lambda functions are typically used for simple operations or calculations.
+
+
 **Example of Lambda function**
 1) 
 add = lambda x, y: x + y
