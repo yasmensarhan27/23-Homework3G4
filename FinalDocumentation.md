@@ -14,3 +14,10 @@ It also includes a test function to ensure the correctness of the work calculati
     - `work_done` (list of float): A list of work done (in joules) at each point in time.
 5) test_calculate_work_done()`: Tests the `calculate_work_done` function to ensure its correctness.
 
+6) Usage:
+    1. Defines given data (velocities in mph, conversion factor, mass of car).
+    2. Converts velocities from mph to m/s.
+    3. Manually calculate the expected work done at each point.
+    4. Calls `calculate_work_done` to calculate work done.
+    5. Compares the calculated and expected values within a small tolerance.
+    6. Prints the calculated work done.
